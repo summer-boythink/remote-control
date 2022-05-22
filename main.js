@@ -1,7 +1,6 @@
 const { app, BrowserWindow ,ipcRenderer, ipcMain,webContents} = require('electron')
 const path = require('path')
 const screenshot = require('screenshot-desktop')
-const {shotEmitter} = require("./emitInstance")
 // const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
 
 function createWindow () {
