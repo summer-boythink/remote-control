@@ -2,7 +2,7 @@ const { app, BrowserWindow ,ipcRenderer, ipcMain,webContents} = require('electro
 const path = require('path')
 const screenshot = require('screenshot-desktop')
 // const { default: installExtension, REACT_DEVELOPER_TOOLS } = require('electron-devtools-installer');
-
+const { exec } = require('child_process');
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -16,9 +16,11 @@ function createWindow () {
 }
 
 async function shotImg(){
-	let path = await screenshot({ filename: 'shot.jpg' }).then(path => {
+	let path = await screenshot({ filename: 'shot.jpg' }).then(async (path) => {
+    exec("node ./uploadShot.js")
     return path
   })
+  
   return path
 }
 

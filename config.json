@@ -1,4 +1,6 @@
 {
-   "screenshotInterval" :220
+   "screenshotInterval" :550,
+   "uploadShotUrl":"http://xxx:5580/upload/shot",
+   "getShotUrl":"http://xxx:5580/getshot"
 }
 
